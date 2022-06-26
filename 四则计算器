@@ -1,0 +1,85 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+int add(int x, int y)
+{
+	int z = x + y;//函数定义也需分号
+	return z;
+}
+int subtraction(int x, int y)
+{
+	int z = x - y;
+	return z;
+}
+int multiplication(int x, int y)
+{
+	int z = x * y;
+	return z;
+}
+int divition(int x, int y)
+{
+	int z = x / y;
+	return z;
+}
+int reminder(int x, int y)
+{
+	int z = x % y;
+	return z;
+}
+int main()
+{
+	int product = 0;
+	int quotients = 0;
+	int reminders = 0;
+	int difference = 0;
+	int sum = 0;
+	int num1 = 0;
+	int num2 = 0;
+	int type = 0;
+	while (type <= 5)
+	{
+		printf("欢迎使用计算器\n");
+		printf("请选择您要进行的运算类型\n");
+		printf("输入1进行加法，输入2进行减法,输入3进行乘法，输入4进行除法，输入5进行求余，输入6结束程序\n");
+		scanf("%d", &type);//scanf需要双引号
+		if (type ==1) //if、else 不需加分号   //“=”意为赋值，“==”意为等于
+		{
+			printf("您选择加法\n");
+			printf("请输入加数\n");
+			scanf("%d%d", &num1, &num2);
+			sum = add(num1, num2);
+			printf("和为%d\n", sum);
+		}
+		if(type ==2)
+		{
+			printf("您选择减法\n");
+			printf("请输入被减数与减数\n");
+			scanf("%d%d", &num1, &num2);
+			difference = subtraction(num1, num2);
+			printf("差为%d\n", difference);
+		}
+		if (type == 3)
+		{
+			printf("您选择乘法\n");
+			printf("请输入因数\n");
+			scanf("%d%d", &num1, &num2);
+			product = multiplication(num1, num2);
+			printf("积为%d\n", product);
+		}
+		if (type == 4)
+		{
+			printf("您选择除法\n");
+			printf("请输入被除数与除数\n");
+			scanf("%d%d", &num1, &num2);
+			quotients = divition(num1, num2);
+			printf("商为%d\n", quotients);
+		}
+		if (type == 5)
+		{
+			printf("您选择求余\n");
+			printf("请输入被除数与除数\n");
+			scanf("%d%d", &num1, &num2);
+			reminders = reminder(num1, num2);
+			printf("余为%d\n", reminders);
+		}
+	}
+	return 0;
