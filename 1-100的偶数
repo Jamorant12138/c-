@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main()
+{
+	int x = 1;
+	int remainder = 0;
+		while (x <= 100)
+		{
+			remainder = x % 2;
+			if (0 == remainder)//比较大小时，左值写常量可避免出现bug
+			{
+				printf("%d\n", x);
+				x++;
+			}
+			else
+			{
+				x++;
+			}
+	}
+	return 0;
+}
