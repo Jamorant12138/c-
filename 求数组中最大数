@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main()
+{
+	int x = 0;
+	int y = 0;
+	int z = 0;
+	int h = 0;
+	int max = 0;
+	int i = 2;
+	scanf("%d%d%d%d", &x, &y, &z, &h);
+	int arr[4] = { x,y,z,h };
+	if (arr[0] >= arr[1])
+	{
+		max = arr[0];
+	}
+	else max = arr[1];
+	while (4 > i)
+	{
+		if (max >= arr[i])
+		{
+			i++;
+		}
+		else
+		{
+			max = arr[i];
+			i++;
+		}
+	}
+	printf("%d\n", max);
+	return 0;
+}
