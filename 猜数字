@@ -1,0 +1,65 @@
+#include <stdio.h>
+#include <time.h>//2、3行为时间戳、随机数必要预处理文件
+#include <stdlib.h>
+
+
+void game()
+{
+	int answer = 0;
+	srand((unsigned int)time(NULL));//8、9行是随机数的生成，其中time要返回空值NULL
+	int random = rand();
+	printf("请猜测您的数字\n");
+	while (answer != random)
+	{
+		scanf("%d", &answer);
+		if (answer == random)
+		{
+			printf("答案正确\n");
+		}
+		else if (answer > random)
+		{
+			printf("差点运气,猜大了\n");
+		}
+		else if (answer < random)
+		{
+			printf("再接再厉，猜小了\n");
+		}
+	}
+	
+}
+int main()
+{
+	int choose = 0;
+	do {
+		printf("                                            **      1.开始游戏        **    \n");
+		printf("                                             **     2.关闭程序       **     \n");
+		printf("                                              *  你想试试别的键也行  *       \n");
+		scanf("%d", &choose);
+		switch (choose)
+		{
+		case 1:
+			printf("游戏开始\n");
+			game();
+			break;
+		case 2:
+			printf("退出程序\n");
+			break;
+		default:
+			printf("输入错误\n");
+				break;
+		}
+	} while (1 == choose);
+	return 0;
+}
+//int main()
+//{
+//	int i = 0;
+//	while (i < 6)
+//	{
+//		srand((unsigned int)time(NULL));
+//		int random = rand();
+//		printf("%d\n", random);
+//		i++;
+//	}
+//
+//}
