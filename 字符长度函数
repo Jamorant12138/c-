@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int my_strelen(char* st)
+{
+	int count = 0;
+	while (*st != '\0')
+	{
+		count++;
+		st++;
+	}
+	return count;
+}
+
+int main()
+{
+	char arr[] = { "abc" };
+	printf("%d", my_strelen(arr));
+	return 0;
+}
