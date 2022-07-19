@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int my_strelen(char* st)
+{
+	if (*st != '\0')
+	{
+		return 1 + my_strelen(st + 1);
+	}
+	else
+	{
+		return 0;
+	}
+}
+
+int main()
+{
+	char arr[] = { "abc" };
+	printf("%d", my_strelen(arr));
+	return 0;
+}
