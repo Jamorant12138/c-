@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int frog(int n)
+{
+	if (n > 1)
+	{
+		return frog(n - 1) + frog(n - 2);
+	}
+	else
+	{
+		return 1;
+	}
+
+}
+int main()
+{
+	int n = 0;
+	scanf("%d", &n);
+	printf("%d", frog(n));
+	return 0;
+}
