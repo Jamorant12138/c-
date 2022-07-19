@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+//int main()
+//{
+//	int x = 1;
+//	int y = 1;
+//	int bridge = 0;     //利用中间变量bridge储存x的旧值
+//	printf("%d %d ", x, y);   
+//	while (x <= 100)
+//	{
+//		bridge = x;
+//		x = x + y;
+//		y = bridge;
+//		printf("%d ", x);
+//	}
+//	return 0;
+//}
+
+int main()
+{
+	int x = 1;
+	int y = 1;
+	printf("%d %d ", x, y);   
+	while (x <= 100)       //利用减法还原x的旧值
+	{
+		x = x + y;
+		y = x - y;
+		printf("%d ", x);
+	}
+	return 0;
+}
